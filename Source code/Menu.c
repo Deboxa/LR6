@@ -143,7 +143,7 @@ static void delete_record(const char* file_name, int index)
     fseek(file, (index - 1) * sizeof(data), SEEK_SET);
     if (fread(&person, sizeof(data), 1, file) != 1)
     {
-        printf("Records does not exist!\n");
+        printf("Record does not exist!\n");
         fclose(file);
         return;
     }
@@ -196,6 +196,12 @@ static void add_record(const char* file_name)
     fwrite(&person, sizeof(person), 1, file);
 #else
     FILE* file_data = fopen("records.bin", "rb");
+    if (file_data == NULL) {
+        fclose(file);
+        fclose(file_data);
+        perror("File cannot be opened");
+        return;
+    }
     fseek(file_data, 0, SEEK_SET);
     while (fread(&person, sizeof(person), 1, file_data))
     {

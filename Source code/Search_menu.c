@@ -14,7 +14,7 @@ void search_menu(const char* file_name)
             "3 Region\n"
             "4 Subject\n"
             "5 Year\n"
-            "6 Exit\n");
+            "6 Back\n");
         if (scanf_c("%d", &sv) != 1)
         {
             printf("Input error!\n");
