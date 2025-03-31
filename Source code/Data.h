@@ -1,20 +1,21 @@
 #ifndef DATA_H
 #define DATA_H
 
-#define MAX_NAME_SIZE 50 // максимальный размер имени
-#define MAX_MISC_SIZE (MAX_NAME_SIZE / 2) // максимальный размер региона, предмета и т.д.
+#define MAX_NAME_SIZE 50 
+#define MAX_MISC_SIZE (MAX_NAME_SIZE / 2) 
+#define TOTAL_RECORDS 300000
 //#define MANUAL_TYPING
 
-typedef struct data //структура для 25 варианта
+typedef struct data 
 {
-    char name[MAX_NAME_SIZE]; //ФИО
-    int schoolnum; //номер школы
-    char region[MAX_MISC_SIZE]; // регион
-    char subject[MAX_MISC_SIZE]; // предмет
-    int year; // год
-    int is_deleted; // флаг удаления записи
+    char name[MAX_NAME_SIZE]; 
+    int schoolnum; 
+    char region[MAX_MISC_SIZE]; 
+    char subject[MAX_MISC_SIZE]; 
+    int year; 
+    int is_deleted; 
 } data;
 
-int scanf_c(const char* format, ...); // стандартная функция scanf с автоотчисткой буфера stdin, реализовано через библиотеку stdarg.h
+int scanf_c(const char* format, ...); 
 
 #endif

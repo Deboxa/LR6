@@ -1,7 +1,11 @@
-#include <stdio.h>
-#include "Search_menu.h"
+#ifdef _MSC_VER
+#define _CRT_SECURE_NO_WARNINGS
+#endif
+
 #include "Data.h"
 #include "Menu.h"
+#include "Search_menu.h"
+#include <stdio.h>
 
 void search_menu(const char* file_name)
 {
