@@ -1,1 +1,1 @@
-![Sorting Algorithm Comparison Graph](sorting_comparison.png)
+![Sorting Algorithm Comparison Graph](comparison.png)
